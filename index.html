@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Korgajja Oyster Mushroom — Fresh Gourmet Mushrooms</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="logo" href="#">KORGAJJA<span>OYSTER MUSHROOM</span></a>
+    <nav class="navlinks">
+      <a href="#shop">Shop</a><a href="#deals">Offers</a><a href="#shop">Mushrooms⌄</a><a href="#footer">Contact</a><a href="#about">About⌄</a><a href="#footer">Farm</a>
+    </nav>
+    <div class="nav-actions">
+      <label class="search">⌕<input id="searchInput" placeholder="Search products"></label>
+      <button class="icon-btn" id="accountBtn" aria-label="Account">♙</button>
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒<span class="badge" id="cartBadge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <div class="eyebrow">Welcome to Korgajja Mushrooms</div>
+      <h1>Fresh Organic &amp; Gourmet Korgajja Oyster Mushrooms</h1>
+      <p>Discover exceptional taste, carefully grown and crafted for you. Fresh Korgajja oyster mushrooms, grown with love and clean maintenance, are only a click away.</p>
+      <button class="primary" onclick="document.querySelector('#shop').scrollIntoView()">Shop Now →</button>
+    </div>
+    <div class="hero-art" aria-label="Korgajja mushroom grower holding fresh mushrooms">
+      <div class="hero-circle"></div>
+      <img class="hero-photo" src="hero-mushroom-farmer.png" alt="Mushroom grower holding fresh oyster and button mushrooms">
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="section-title"><h2>Choose Your Featured Mushroom Types</h2></div>
+    <div class="categories">
+      <a class="cat" href="#shop" onclick="filterProducts('Button')"><img class="cat-photo" src="button-mushroom.jpg" alt="Button mushrooms"><span>Button Mushrooms</span></a>
+      <a class="cat" href="#shop" onclick="filterProducts('Oyster')"><img class="cat-photo" src="oyster-mushroom.jpg" alt="Oyster mushrooms"><span>Oyster Mushroom</span></a>
+      <a class="cat" href="#shop" onclick="filterProducts('Milky')"><img class="cat-photo" src="milky-mushroom.jpg" alt="Milky mushrooms"><span>Milky Mushroom</span></a>
+      <a class="cat" href="#shop" onclick="filterProducts('Pink')"><img class="cat-photo" src="pink-oyster.jpg" alt="Pink oyster mushrooms"><span>Pink Oyster Mushroom</span></a>
+      <a class="cat" href="#shop" onclick="filterProducts('Blue')"><img class="cat-photo" src="blue-oyster.jpg" alt="Blue oyster mushrooms"><span>Blue Oyster Mushroom</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="shop" style="padding-top:10px">
+<div class="container">
+  <div class="section-title"><h2>Today's Fresh Mushroom Selection!</h2></div>
+  <div class="tabs" id="tabs">
+    <button class="tab active" onclick="filterProducts('All',this)">All Mushrooms</button>
+    <button class="tab" onclick="filterProducts('Button',this)">Button</button>
+    <button class="tab" onclick="filterProducts('Oyster',this)">Oyster</button>
+    <button class="tab" onclick="filterProducts('Milky',this)">Milky</button>
+    <button class="tab" onclick="filterProducts('Pink',this)">Pink Oyster</button>
+    <button class="tab" onclick="filterProducts('Blue',this)">Blue Oyster</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</div>
+</section>
+
+<section class="section" id="deals">
+<div class="container">
+  <div class="deals">
+    <div class="deal"><small>Farm Fresh Offer <b style="background:#74b53e;color:white;padding:3px 6px;border-radius:4px;margin-left:4px">SAVE 20%</b></small><h3>Fresh Mushroom<br>Bundles</h3><button class="primary">Explore Offer →</button></div>
+    <div class="deal"><small>Regular Offer</small><h3>Freshness<br>delivered to you</h3><small>Cleanly grown · Carefully packed · Farm fresh</small><button class="primary" style="margin-top:10px">Shop Mushrooms →</button></div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="popular">
+<div class="container">
+  <div class="section-title"><h2>Popular Mushroom Picks</h2><a href="#shop">See All →</a></div>
+  <div class="grid" id="popularGrid"></div>
+</div>
+</section>
+
+<section class="banner">
+  <div class="banner-content"><small>Farm Fresh &amp; Carefully Grown</small><h2>Need fresh organic &amp; gourmet<br>mushrooms every day?</h2><button class="primary" onclick="document.querySelector('#shop').scrollIntoView()">Shop Now →</button></div>
+</section>
+
+<section class="section" id="about">
+<div class="container">
+  <div class="section-title"><h2>Ready to get started?</h2></div>
+  <div class="info-grid">
+    <div class="info"><h3>🍄 Grow mushrooms<br>with Korgajja</h3><p>Learn how we cultivate fresh mushrooms with care, cleanliness and consistency.</p><button class="learn">Learn More →</button></div>
+    <div class="info"><h3>📣 Partner with<br>Korgajja</h3><p>Bring premium Korgajja mushrooms to more homes, kitchens and businesses.</p><button class="learn">Learn More →</button></div>
+    <div class="info"><h3>📖 Learn more about<br>our mushrooms</h3><p>Discover our mushroom varieties, growing process and fresh delivery promise.</p><button class="learn">Learn More →</button></div>
+  </div>
+</div>
+</section>
+</main>
+
+<section class="trust">
+<div class="container trust-grid">
+  <div class="trust-item"><div class="trust-icon">🚚</div><div><b>Fresh Delivery</b><span>Fresh mushrooms packed with care</span></div></div>
+  <div class="trust-item"><div class="trust-icon">▣</div><div><b>Safe Payment</b><span>Secure and simple checkout</span></div></div>
+  <div class="trust-item"><div class="trust-icon">🌱</div><div><b>Clean Growing</b><span>Grown with care and clean maintenance</span></div></div>
+  <div class="trust-item"><div class="trust-icon">🍄</div><div><b>Premium Mushrooms</b><span>Organic and gourmet varieties</span></div></div>
+</div>
+</section>
+
+<footer id="footer" class="footer">
+<div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand"><div class="logo">KORGAJJA <span>OYSTER MUSHROOM</span></div><p>Fresh organic and gourmet Korgajja mushrooms, grown with love and clean maintenance.</p></div>
+    <div><h4>Get to know us</h4><a href="#">About</a><a href="#">Blog</a><a href="#">Our Values</a><a href="#">Careers</a></div>
+    <div><h4>For Consumers</h4><a href="#">Payments</a><a href="#">Shipping</a><a href="#">Product Returns</a><a href="#">FAQs</a></div>
+    <div><h4>Best Selling Mushrooms</h4><a href="#shop">Button Mushrooms</a><a href="#shop">Oyster Mushroom</a><a href="#shop">Milky Mushroom</a><a href="#shop">Pink Oyster</a></div>
+    <div><h4>Help</h4><a href="#">Support</a><a href="#">Track Order</a><a href="#">Refund Policy</a><a href="#">Security &amp; Fraud</a></div>
+  </div>
+  <div class="bottom"><span>Terms of Service &nbsp; Privacy &amp; Policy</span><span>© 2026 Korgajja Oyster Mushroom. All rights reserved.</span><span>AMEX · Pay · VISA</span></div>
+</div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2>Your Cart</h2><button class="close" id="closeCart">×</button></div>
+  <div class="cart-list" id="cartList"></div>
+  <div class="cart-foot"><div class="total"><span>Total</span><span id="cartTotal">₹0.00</span></div><button class="primary" style="width:100%" onclick="checkout()">Proceed to Checkout →</button></div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
